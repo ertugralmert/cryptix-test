@@ -4,7 +4,8 @@
 CrytixTest : local ortamda Cryptix'i testme add.provider ile  
 SecurityFileTest: local ortamda JVM'e parametre geçerek oluşturduğumuz java.security dosyasını kullanarak Cryptix'i testme  
 CryptixTestServlet : web ortamda Cryptix'i testme (Open Liberty)  
-CryptoProviderLoader : Cryptix provider'ı eklemek için weblistener anotasyonunu kullanma
+CryptoProviderLoader : Cryptix provider'ı eklemek için weblistener anotasyonunu kullanma  
+
 Özet olarak:
 
 JVM’nin boot aşamasında Cryptix sağlayıcısının otomatik yüklenmemesi problemiyle karşılaşıldı.
