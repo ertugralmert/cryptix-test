@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<server description="new server">
+    <featureManager>
+        <feature>servlet-6.0</feature>
+    </featureManager>
+
+    <basicRegistry id="basic" realm="BasicRealm">
+        <user name="admin" password="admin"/>
+    </basicRegistry>
+
+    <httpEndpoint id="defaultHttpEndpoint"
+                  httpPort="9081"
+                  httpsPort="9443"/>
+
+    
+    <library id="cryptixLib">
+        <fileset dir="/Users/mertugral/Desktop/wlp/usr/servers/defaultServer/lib" includes="*.jar"/>
+    </library>
+
+    <webApplication id="cryptix-test" 
+                   location="cryptix-test-1.0-SNAPSHOT.war" 
+                   name="cryptix-test"
+                   context-root="/">
+        <classloader commonLibraryRef="cryptixLib"/>
+    </webApplication>
+
+    <jvm>
+        <!-- JVM'nin boot classpath'ine Cryptix JAR ekleme -->
+        <jvmOptions>-Xbootclasspath/a:/Users/mertugral/Desktop/wlp/usr/servers/defaultServer/lib/cryptix-jce-provider.jar</jvmOptions>
+        <jvmOptions>-Xbootclasspath/a:/Users/mertugral/Desktop/wlp/usr/servers/defaultServer/lib/cryptix-jce-api.jar</jvmOptions>
+        
+        <!-- JVM seçenekleri -->
+        <jvmOptions>-Djava.security.debug=properties</jvmOptions>
+        <jvmOptions>-Djava.security.properties==${server.config.dir}/java.security</jvmOptions>
+    </jvm>
+
+    <applicationManager autoExpand="true"/>
+</server>
