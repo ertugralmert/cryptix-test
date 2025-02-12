@@ -1,0 +1,15 @@
+# src/main/resources altında java.security dosyası oluşturuyorum
+security.provider.1=SUN
+security.provider.2=SunRsaSign
+security.provider.3=SunEC
+security.provider.4=SunJSSE
+security.provider.5=SunJCE
+security.provider.6=SunJGSS
+security.provider.7=SunSASL
+security.provider.8=XMLDSig
+security.provider.9=SunPCSC
+security.provider.10=JdkLDAP
+security.provider.11=JdkSASL
+security.provider.12=SunPKCS11
+security.provider.13=Apple
+security.provider.14=cryptix.jce.provider.CryptixCrypto
